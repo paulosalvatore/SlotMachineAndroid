@@ -1,0 +1,11 @@
+<resources>
+	<string name="app_name">SlotMachineAndroid</string>
+	<string name="desenvolvedor">Desenvolvido por Paulo Salvatore</string>
+	<string name="jogar">Jogar</string>
+	<string name="sobre">Sobre</string>
+	<string name="versao">Versão: 1.0</string>
+	<string name="masculino">Cho\'Gath</string>
+	<string name="feminino">Katarina</string>
+	<string name="nome_jogador">Nome do Jogador</string>
+	<string name="total_fichas">Total de Fichas</string>
+</resources>

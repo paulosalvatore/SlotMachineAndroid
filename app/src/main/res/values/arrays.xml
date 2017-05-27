@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="fichas">
+		<item>1 Ficha</item>
+		<item>2 Fichas</item>
+		<item>3 Fichas</item>
+		<item>4 Fichas</item>
+		<item>5 Fichas</item>
+		<item>6 Fichas</item>
+		<item>7 Fichas</item>
+		<item>8 Fichas</item>
+		<item>9 Fichas</item>
+		<item>10 Fichas</item>
+	</string-array>
+</resources>

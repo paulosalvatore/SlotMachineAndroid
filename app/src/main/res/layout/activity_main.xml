@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="paulosalvatore.com.br.slotmachineandroid.MainActivity"
+	android:background="@drawable/background">
+
+	<info.hoang8f.widget.FButton
+		android:text="@string/jogar"
+		android:onClick="jogar"
+		android:layout_marginTop="200dp"
+		app:buttonColor="#2a5275"
+		app:shadowEnabled="true"
+		app:shadowHeight="5dp"
+		style="@style/botao"/>
+
+	<info.hoang8f.widget.FButton
+		android:text="@string/sobre"
+		android:onClick="sobre"
+		android:layout_marginTop="20dp"
+		app:buttonColor="#2a5275"
+		app:shadowEnabled="true"
+		app:shadowHeight="5dp"
+		style="@style/botao"/>
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:textSize="20sp"
+		android:textColor="#FFFFFF"
+		android:text="@string/desenvolvedor"
+		android:fontFamily="sans-serif-smallcaps"
+		android:gravity="bottom"
+		android:textAlignment="center"/>
+</LinearLayout>

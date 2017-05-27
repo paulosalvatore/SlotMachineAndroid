@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="paulosalvatore.com.br.slotmachineandroid.SobreActivity">
+
+	<ImageView
+		android:layout_width="150dp"
+		android:layout_height="150dp"
+		android:layout_margin="50dp"
+		android:src="@drawable/logo"
+		android:layout_gravity="center"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/app_name"
+		android:textSize="30sp"
+		android:gravity="center"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="@string/versao"
+		android:textSize="30sp"
+		android:gravity="center"/>
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:textSize="20sp"
+		android:text="@string/desenvolvedor"
+		android:fontFamily="sans-serif-smallcaps"
+		android:gravity="bottom"
+		android:textAlignment="center"/>
+</LinearLayout>

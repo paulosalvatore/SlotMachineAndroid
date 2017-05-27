@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="paulosalvatore.com.br.slotmachineandroid.PersonagemActivity">
+
+	<RadioGroup
+		android:id="@+id/rgSexo"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:checkedButton="@+id/rbChoGath"
+		android:orientation="horizontal">
+
+		<RadioButton
+			android:id="@+id/rbChoGath"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5"
+			android:hint="@string/masculino"/>
+
+		<RadioButton
+			android:id="@+id/rbKatarina"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5"
+			android:hint="@string/feminino"/>
+	</RadioGroup>
+
+	<EditText
+		android:id="@+id/etNome"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="@string/nome_jogador"/>
+
+	<Spinner
+		android:id="@+id/spFichas"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:entries="@array/fichas"/>
+
+	<ImageView
+		android:id="@+id/ivSexo"
+		android:layout_width="343dp"
+		android:layout_height="245dp"
+		android:layout_gravity="center"
+		android:layout_marginTop="30dp"
+		android:src="@drawable/chogath"/>
+
+	<info.hoang8f.widget.FButton
+		style="@style/botao"
+		android:layout_marginTop="20dp"
+		android:onClick="jogar"
+		android:text="@string/jogar"
+		app:buttonColor="#2a5275"
+		app:shadowEnabled="true"
+		app:shadowHeight="5dp"/>
+</LinearLayout>
