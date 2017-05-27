@@ -1,9 +1,11 @@
 package paulosalvatore.com.br.slotmachineandroid;
 
 import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,11 +16,14 @@ import info.hoang8f.widget.FButton;
 
 public class GameActivity extends AppCompatActivity {
 
+	private Chronometer cronometro;
+
 	private ImageView ivSlot1, ivSlot2, ivSlot3;
 	private Roda slot1, slot2, slot3;
 	private FButton btJogar;
 	private TextView tvFichas;
 	private TextView tvNome;
+	private ImageView ivSexo;
 
 	private int fichas = 0;
 
@@ -40,9 +45,20 @@ public class GameActivity extends AppCompatActivity {
 		tvFichas = (TextView) findViewById(R.id.tvFichas);
 		tvNome = (TextView) findViewById(R.id.tvNome);
 
+		ivSexo = (ImageView) findViewById(R.id.ivSexo);
+
 		tvNome.setText(getIntent().getStringExtra("NOME"));
 
+		if (getIntent().getStringExtra("SEXO").equals("1"))
+			ivSexo.setImageResource(R.drawable.chogath);
+		else
+			ivSexo.setImageResource(R.drawable.katarina);
+
 		atualizarFichas(Integer.parseInt(getIntent().getStringExtra("FICHAS")));
+
+		cronometro = (Chronometer) findViewById(R.id.cronometro);
+		cronometro.setBase(SystemClock.elapsedRealtime());
+		cronometro.start();
 	}
 
 	public void jogar(View v) {
@@ -68,15 +84,24 @@ public class GameActivity extends AppCompatActivity {
 				}
 			}, 3000);
 		}
+		else
+		{
+			Toast.makeText(this, "Você não possui fichas suficientes.", Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	private int atualizarFichas(int quantidade)
 	{
-		fichas += quantidade;
+		if (quantidade > 0 || (quantidade < 0 && fichas > 0))
+		{
+			fichas += quantidade;
 
-		tvFichas.setText("Fichas: " + Integer.toString(fichas));
+			tvFichas.setText(getString(R.string.fichas) + Integer.toString(fichas));
 
-		return fichas;
+			return fichas;
+		}
+
+		return -1;
 	}
 
 	private void exibeResultado() {

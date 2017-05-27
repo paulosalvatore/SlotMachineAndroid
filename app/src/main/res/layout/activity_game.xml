@@ -14,28 +14,48 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="Nome"
-		android:textSize="30sp"
-		android:textColor="#FFFFFF"/>
+		android:textColor="#FFFFFF"
+		android:textSize="30sp"/>
 
 	<TextView
-		android:layout_below="@id/tvNome"
 		android:id="@+id/tvFichas"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="Fichas"
-		android:textSize="30sp"
-		android:textColor="#FFFFFF"/>
+		android:layout_below="@id/tvNome"
+		android:text="@string/fichas2"
+		android:textColor="#FFFFFF"
+		android:textSize="30sp"/>
+
+	<Chronometer
+		android:id="@+id/cronometro"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/tvFichas"
+		android:format="%s"
+		android:textColor="#FFFFFF"
+		android:textSize="30sp"/>
 
 	<LinearLayout
 		android:id="@+id/llCabecalho"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:orientation="vertical"
+		android:layout_below="@id/tvFichas"
+		android:layout_marginTop="20dp"
+		android:gravity="center"
+		android:orientation="horizontal"
 		android:padding="16dp">
 
 		<ImageView
-			android:layout_width="match_parent"
-			android:layout_height="90dp"
+			android:id="@+id/ivSexo"
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:layout_weight="0"
+			android:src="@drawable/chogath"/>
+
+		<ImageView
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:layout_weight="0"
 			android:src="@drawable/logo"/>
 	</LinearLayout>
 

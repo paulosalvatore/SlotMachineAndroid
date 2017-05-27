@@ -8,4 +8,6 @@
 	<string name="feminino">Katarina</string>
 	<string name="nome_jogador">Nome do Jogador</string>
 	<string name="total_fichas">Total de Fichas</string>
+	<string name="fichas">"Fichas: "</string>
+	<string name="fichas2">Fichas</string>
 </resources>
